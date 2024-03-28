@@ -1,0 +1,4 @@
+# SvelteKit output directory
+/build
+/.svelte-kit
+/dist
