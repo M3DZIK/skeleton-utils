@@ -22,7 +22,7 @@
     }
 </script>
 
-<ActionableInput iconCount={1} bind:value bind:ref {width}>
+<ActionableInput iconCount={1} {width} {...$$restProps} bind:value bind:ref on:keydown on:keypress on:keyup>
     <ActionableInputIcon>
         <button on:click={toogleVisibility}>
             {#if visibility}
