@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let value: string = "text";
+    export let value: string = 'text';
     export let width: string = 'w-full';
 
     export let ref: HTMLInputElement | null = null;
@@ -15,7 +15,16 @@
 </script>
 
 <div class="relative {width}">
-    <input class="input w-full h-10 pl-2" style={calculatePaddingRight()} {...$$restProps} bind:value bind:this={ref} on:keydown on:keypress on:keyup  />
+    <input
+        class="input w-full h-10 pl-2"
+        style={calculatePaddingRight()}
+        {...$$restProps}
+        bind:value
+        bind:this={ref}
+        on:keydown
+        on:keypress
+        on:keyup
+    />
 
     <div class="absolute inset-y-0 right-0 flex items-center px-2">
         <slot />

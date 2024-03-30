@@ -31,11 +31,11 @@
         }
     }
 
-    export let height = "h-0.5"
+    export let height = 'h-0.5';
 </script>
 
 {#if $p > 0 && $p < 1 && isVisible}
     <div class="fixed w-full z-50" transition:fade={{ duration: 300 }}>
-        <ProgressBar value={$p} max={1} height={height} rounded="" meter="bg-secondary-500" />
+        <ProgressBar value={$p} max={1} {height} rounded="" meter="bg-secondary-500" />
     </div>
 {/if}

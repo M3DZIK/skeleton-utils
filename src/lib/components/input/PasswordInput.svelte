@@ -1,9 +1,9 @@
 <script lang="ts">
-    import { Icon } from '@steeze-ui/svelte-icon';
-    import { Visibility, VisibilityOff } from "@steeze-ui/material-design-icons";
-
-    import { ActionableInput, ActionableInputIcon } from "$lib";
     import { onMount } from 'svelte';
+    import { Visibility, VisibilityOff } from '@steeze-ui/material-design-icons';
+    import { Icon } from '@steeze-ui/svelte-icon';
+
+    import { ActionableInput, ActionableInputIcon } from '$lib';
 
     export let value: string;
     export let width: string = 'w-full';
@@ -16,13 +16,13 @@
     });
 
     function toogleVisibility() {
-        visibility = !visibility
+        visibility = !visibility;
 
         ref.type = visibility ? 'text' : 'password';
     }
 </script>
 
-<ActionableInput iconCount={1} bind:value bind:ref width={width}>
+<ActionableInput iconCount={1} bind:value bind:ref {width}>
     <ActionableInputIcon>
         <button on:click={toogleVisibility}>
             {#if visibility}
