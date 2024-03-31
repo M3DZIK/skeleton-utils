@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let value: string = 'text';
+    export let value: any;
     export let width: string = 'w-full';
 
     export let ref: HTMLInputElement | null = null;

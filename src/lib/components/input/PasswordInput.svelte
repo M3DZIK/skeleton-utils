@@ -5,7 +5,7 @@
 
     import { ActionableInput, ActionableInputIcon } from '$lib';
 
-    export let value: string;
+    export let value: any;
     export let width: string = 'w-full';
 
     let ref: HTMLInputElement;
